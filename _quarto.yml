@@ -1,0 +1,26 @@
+project:
+  type: website
+  render:
+    - junior-day-2026.qmd
+
+format:
+  revealjs:
+    theme: [college-of-idaho.scss, logo.scss]
+    logo: images/coilogo.png
+    slide-number: true
+    progress: true
+    hash: true
+    hash-type: number
+    width: 1280
+    height: 720
+    transition: slide
+    background-transition: fade
+    navigation-mode: linear
+    controls: true
+    footer: "Junior Preview Day | College of Idaho | May 2, 2026"
+    chalkboard: false
+    history: false
+
+execute:
+  echo: false
+  eval: false
