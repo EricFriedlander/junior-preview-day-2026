@@ -204,28 +204,31 @@ Eric Friedlander
 
 </section>
 <section class="slide level2">
-<h2>A Little Bit About Met</h2>
+<h2>A Little Bit About Me</h2>
 <ul>
 <li>I’m in the <strong>MAPS</strong> (Mathematics &amp; Physical Sciences) department</li>
 <li>I mostly teach Statistics, Computer Science, and Data Analytics Courses</li>
 <li>My undergraduate degree is in Mathematics &amp; Statistics</li>
+<li>After college, I was a Business Analyst at Capital One</li>
 <li>My graduate degree is in Statistics &amp; Operations Research</li>
+<li>Did a Post-Doc in Population Genetics</li>
 <li>I’m grew up just outside New York City</li>
 </ul>
 </section>
 <section class="slide level2">
 <h2>Why should you study Math and Statistics?</h2>
 <ul>
-<li>The demand for quantitative skills is outpacing nearly every other field.</li>
-<li>Extremely high earning potential</li>
+<li><span class="fragment strike">The demand for quantitative skills is outpacing nearly every other field</span></li>
+<li><span class="fragment strike">Extremely high earning potential</span></li>
 </ul>
 <div class="fragment">
 <div>
 <ul>
 <li class="fragment"><a href="https://www.youtube.com/watch?v=oYJRwgHEFS0">Because it’s hard</a></li>
 <li class="fragment">Doing hard stuff is rewarding and will prepare you for success</li>
-<li class="fragment">You will have more flexibility</li>
+<li class="fragment">Doing hard stuff will provide you with flexibility</li>
 <li class="fragment">Jobs requiring strong quantitative skills are consistently ranked as having the highest quality of life</li>
+<li class="fragment">Math at the top of “stable careers” according to BLS</li>
 </ul>
 </div>
 </div>
@@ -291,9 +294,22 @@ Eric Friedlander
 <ul>
 <li class="fragment">We build a model</li>
 <li class="fragment">What’s a model?</li>
-<li class="fragment">Model: a simplified but tractable representation of the real world</li>
 </ul>
 </div>
+</section>
+<section class="slide level2">
+<h2>Text “modelyote” followed by your answer to 22333.</h2>
+<div class="container">
+<iframe src="https://embed.polleverywhere.com/free_text_polls/m8v8aZDjNsGL0dtEE2CLZ?controls=none&amp;short_poll=true" width="800px" height="600px">
+</iframe>
+</div>
+</section>
+<section class="slide level2">
+<h2>What is a model?</h2>
+<ul>
+<li>A model is a simplified but tractable version of reality</li>
+<li>What does tractable mean?</li>
+</ul>
 </section>
 <section class="slide level2">
 <h2>Calculating the area of California</h2>
@@ -359,7 +375,7 @@ Eric Friedlander
 <div>
 <ul>
 <li class="fragment">If <span class="math inline">\(p_k\)</span> is the proportion of Luigi’s in the <span class="math inline">\(k\)</span>th generation and…</li>
-<li class="fragment"><span class="math inline">\(X_{k+1}\)</span> is the number of Luigi’s int he <span class="math inline">\(k+1\)</span>th generation then…</li>
+<li class="fragment"><span class="math inline">\(X_{k+1}\)</span> is the number of Luigi’s in the <span class="math inline">\(k+1\)</span>th generation then…</li>
 <li class="fragment"><span class="math inline">\(X_k\)</span> has a <em>Binomial distribution</em></li>
 </ul>
 </div>
@@ -374,7 +390,7 @@ Eric Friedlander
 <span id="cb1-4"><a></a>x2 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, N, p1)</span>
 <span id="cb1-5"><a></a>x2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6</code></pre>
+<pre><code>[1] 5</code></pre>
 </div>
 </div>
 </section>
@@ -386,7 +402,7 @@ Eric Friedlander
 <span id="cb3-2"><a></a>x3 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, N, p2)</span>
 <span id="cb3-3"><a></a>x3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6</code></pre>
+<pre><code>[1] 4</code></pre>
 </div>
 </div>
 </section>
@@ -402,7 +418,7 @@ Eric Friedlander
 <span id="cb5-6"><a></a>}</span>
 <span id="cb5-7"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 5 6 3 3 3 1 2 1 0 0</code></pre>
+<pre><code> [1]  5  6  9  8  7  9  9 10 10 10</code></pre>
 </div>
 </div>
 </section>
@@ -425,62 +441,62 @@ Eric Friedlander
 <span id="cb7-7"><a></a>}</span>
 <span id="cb7-8"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   [1] 500 495 483 477 464 460 470 468 472 471 465 500 472 473 480 462 473 458
-  [19] 475 496 488 483 471 467 462 456 468 466 462 455 468 460 453 446 440 426
-  [37] 427 400 395 384 384 408 406 399 371 384 369 393 415 401 380 391 398 403
-  [55] 431 419 426 399 398 403 417 412 390 376 374 385 389 382 350 339 336 320
-  [73] 311 333 320 329 315 314 321 330 304 303 315 288 281 292 290 322 325 317
-  [91] 296 303 282 322 339 334 343 366 367 365 344 357 359 338 354 359 399 383
- [109] 377 371 359 340 337 361 325 344 318 307 313 315 313 307 306 303 300 300
- [127] 304 321 310 303 300 292 311 332 343 327 331 309 319 302 333 340 321 338
- [145] 329 333 342 329 350 361 362 359 359 379 373 356 363 343 353 355 353 361
- [163] 359 388 363 368 370 368 379 407 404 389 406 411 411 431 416 429 462 444
- [181] 444 423 419 448 436 433 407 404 385 393 396 402 392 404 410 397 376 360
- [199] 366 377 374 361 349 312 320 315 299 282 271 282 287 292 308 321 329 328
- [217] 317 270 284 285 287 273 272 286 264 264 246 250 262 260 272 264 257 234
- [235] 230 242 229 241 236 211 190 200 197 205 198 189 207 195 173 175 186 160
- [253] 151 142 130 128 126 125 122 138 141 159 158 148 141 132 127 120 119 132
- [271] 135 129 133 132 126 130 115 126 127 123 117 114 113 107 100 103  92  83
- [289]  70  72  77  77  65  61  70  69  71  60  67  72  73  56  53  51  67  70
- [307]  75  87  82  66  60  51  67  63  62  66  65  74  89  92 100 104 103 109
- [325] 112 106 100 110 110 116 121 108  80  73  73  61  64  67  59  52  41  62
- [343]  56  53  55  60  62  63  60  79  81  82  72  71  76  64  61  58  59  68
- [361]  64  52  60  71  72  79  86  87  82  76  75  92 111 113 113 109 107 119
- [379] 130 141 142 153 139 123 124 124 128 136 150 151 136 134 127 124 107 120
- [397] 136 152 163 157 174 179 184 188 190 180 161 176 183 184 188 167 175 155
- [415] 177 170 175 196 179 200 220 210 209 194 191 205 218 216 213 225 212 225
- [433] 209 184 205 206 214 196 179 167 178 172 167 157 147 144 134 133 145 158
- [451] 159 164 152 151 145 120 109 100 103  99  98  90  83  99 106 110 115 108
- [469]  98  93  82 101  93  98 101  90  88  79  78  71  69  78  82  85  72  73
- [487]  56  72  71  72  69  76  81  70  71  74  96  93 109  98 113 106  96  95
- [505]  80  76  81  66  78  59  55  47  41  47  57  52  47  54  43  42  40  30
- [523]  31  32  36  28  31  32  32  28  29  30  29  41  35  28  34  39  33  40
- [541]  55  46  57  46  53  51  48  39  44  42  36  37  31  27  38  38  47  55
- [559]  44  49  42  41  40  42  46  47  60  58  75  74  80  88  93 109 113 118
- [577] 107  97 106 102 107 108 105 124 109 100  96 109  99  84  99  93  99  85
- [595]  70  68  81  74  65  61  62  63  57  49  42  46  60  75  97 106 100  90
- [613] 107  99  99 108 103  96  95  97 104  98  86  80  79  86  87  84  91  84
- [631]  81  88  79  72  60  60  70  77  70  76  79  82  87 100 117 107 107 100
- [649] 116 118 135 136 147 132 136 125 130 113 127 121 105 100 106 107 105 106
- [667]  96  96 104  99  82  78  85  91  94  94 102 114 120 118 120 128 124 126
- [685] 133 123 114 128 119 122 131 124 121 123 109 104 109 123 112 122 141 145
- [703] 136 139 130 101  92  93 103 105  90  96  87  83  83  74  86  93  99 104
- [721] 107  97 105 109 103 102  89  78  68  66  61  72  76  66  69  74  72  71
- [739]  64  61  53  52  47  50  49  51  58  55  52  53  57  52  45  53  54  55
- [757]  64  60  56  42  40  41  40  30  20  19  20  21  18  22  30  27  30  34
- [775]  24  24  23  28  23  16  18  16  14  18  17  16  13  12  13  15  16  18
- [793]  19  16  19  15  17  10   9   6   8   6   3   6   7   5   6   7   8   9
- [811]  11  13  17  11   9   4   2   2   1   0   0   0   0   0   0   0   0   0
- [829]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [847]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [865]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [883]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [901]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [919]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [937]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [955]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [973]   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
- [991]   0   0   0   0   0   0   0   0   0   0</code></pre>
+<pre><code>   [1] 500 494 507 531 531 544 525 527 515 492 514 510 520 486 489 459 450 431
+  [19] 432 431 399 396 392 397 400 416 425 416 412 439 441 438 435 421 404 413
+  [37] 407 413 398 401 410 411 403 412 415 457 451 431 433 455 461 454 444 445
+  [55] 455 448 451 455 453 464 465 474 487 455 446 456 447 423 445 418 436 447
+  [73] 452 444 469 467 468 457 455 452 458 467 482 464 464 458 458 465 485 510
+  [91] 502 493 495 487 511 522 506 494 505 489 495 494 473 465 460 474 474 448
+ [109] 450 473 475 490 498 478 484 501 500 530 553 518 525 531 534 535 517 507
+ [127] 513 501 492 508 503 501 505 521 518 530 537 527 542 561 551 531 526 540
+ [145] 534 532 555 574 564 566 550 575 567 579 561 547 536 561 545 533 545 543
+ [163] 554 557 545 556 560 593 596 602 628 611 604 617 621 614 616 638 648 669
+ [181] 683 666 665 664 658 637 629 618 616 585 572 583 598 579 586 597 570 561
+ [199] 563 559 589 575 563 544 494 500 507 513 493 518 492 504 514 511 512 505
+ [217] 513 514 514 494 492 509 529 553 535 513 520 532 548 542 527 531 526 555
+ [235] 580 561 579 589 599 602 616 619 628 643 670 692 674 707 692 686 701 673
+ [253] 641 602 622 646 672 667 657 644 632 643 649 661 695 683 668 653 634 630
+ [271] 643 641 639 632 628 645 627 626 616 632 650 655 652 663 657 636 628 661
+ [289] 660 645 652 662 656 673 660 650 631 632 647 648 653 650 667 669 641 635
+ [307] 667 700 683 677 673 674 682 662 654 645 639 645 649 655 667 665 685 679
+ [325] 683 717 718 685 663 676 681 692 699 703 704 727 755 763 764 790 806 817
+ [343] 832 841 871 861 863 860 841 843 861 863 877 878 874 838 837 858 847 848
+ [361] 853 860 858 836 822 814 817 813 810 800 829 824 826 809 812 813 821 835
+ [379] 822 835 835 854 837 843 873 875 872 866 863 875 878 861 859 858 865 856
+ [397] 858 858 838 842 834 823 809 811 819 817 786 763 768 772 769 760 736 712
+ [415] 711 712 720 718 729 705 719 743 735 736 738 730 754 759 743 739 740 748
+ [433] 745 744 727 735 726 700 695 692 684 670 661 630 617 614 610 606 593 596
+ [451] 615 609 577 578 540 545 554 549 531 534 531 539 521 499 471 453 447 448
+ [469] 461 454 453 464 467 477 466 466 478 497 512 508 488 465 456 470 441 425
+ [487] 430 420 416 429 431 430 421 414 406 413 394 380 395 390 367 357 362 353
+ [505] 365 396 404 390 391 399 398 392 363 376 383 408 419 419 415 401 417 407
+ [523] 414 395 413 397 439 473 469 490 467 446 434 453 413 412 430 445 444 457
+ [541] 441 457 480 471 468 495 507 497 498 497 503 505 501 522 522 496 506 481
+ [559] 476 481 524 498 519 480 471 456 443 447 440 428 437 420 437 471 478 472
+ [577] 492 483 462 457 422 451 452 473 462 466 480 477 477 497 491 512 496 490
+ [595] 481 476 453 433 458 478 477 508 510 501 488 470 464 470 473 465 476 485
+ [613] 481 495 509 487 483 486 494 521 528 558 550 549 541 537 526 520 522 509
+ [631] 523 506 500 506 523 518 494 491 469 490 499 509 517 520 522 531 523 550
+ [649] 565 568 574 587 583 588 569 557 573 583 578 575 561 551 555 549 548 560
+ [667] 541 536 518 510 522 552 541 556 552 558 585 601 595 596 589 587 559 594
+ [685] 571 577 569 564 556 548 558 550 545 541 548 566 568 604 627 635 661 658
+ [703] 668 677 696 709 718 742 735 734 731 762 748 758 762 780 759 752 769 754
+ [721] 757 746 757 770 754 751 767 762 769 785 787 755 767 773 769 756 755 765
+ [739] 774 777 765 764 777 780 787 793 803 791 787 768 763 749 779 799 783 776
+ [757] 782 762 767 787 773 778 781 769 763 747 757 768 761 766 768 783 778 795
+ [775] 786 795 792 782 776 808 818 825 852 844 834 832 825 810 819 834 855 847
+ [793] 859 860 869 871 876 889 861 845 835 845 843 842 828 834 824 813 791 798
+ [811] 804 817 804 817 823 825 809 813 815 815 822 828 815 804 782 778 766 775
+ [829] 778 769 782 761 768 774 770 783 804 802 802 807 785 800 775 798 806 816
+ [847] 811 807 800 794 782 777 772 769 779 766 758 761 776 762 760 767 766 769
+ [865] 785 791 786 798 794 806 816 806 797 787 787 789 793 792 803 812 821 824
+ [883] 833 837 826 818 801 779 795 789 783 778 790 754 760 769 766 764 751 772
+ [901] 762 751 766 770 772 759 771 760 782 787 789 796 800 785 780 762 739 746
+ [919] 738 752 741 734 758 731 741 735 710 727 739 744 733 725 732 742 779 767
+ [937] 765 754 760 762 775 774 788 775 759 749 753 759 717 722 725 712 724 719
+ [955] 737 734 729 726 715 728 751 743 756 761 741 739 742 756 753 749 745 762
+ [973] 756 774 767 771 778 777 783 784 779 802 796 817 807 799 802 808 817 807
+ [991] 819 828 838 841 835 822 830 843 852 837</code></pre>
 </div>
 </div>
 </div>
@@ -1039,7 +1055,7 @@ Eric Friedlander
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/EricFriedlander\.github\.io\/junior-preview-day-2026\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
