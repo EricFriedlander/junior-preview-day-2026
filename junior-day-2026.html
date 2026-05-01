@@ -98,6 +98,8 @@
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -110,6 +112,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -203,7 +206,7 @@ Eric Friedlander
 </div>
 
 </section>
-<section class="slide level2">
+<section class="slide level2 smaller">
 <h2>A Little Bit About Me</h2>
 <ul>
 <li>I’m in the <strong>MAPS</strong> (Mathematics &amp; Physical Sciences) department</li>
@@ -212,7 +215,7 @@ Eric Friedlander
 <li>After college, I was a Business Analyst at Capital One</li>
 <li>My graduate degree is in Statistics &amp; Operations Research</li>
 <li>Did a Post-Doc in Population Genetics</li>
-<li>I’m grew up just outside New York City</li>
+<li>I grew up just outside New York City</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -227,20 +230,9 @@ Eric Friedlander
 <li class="fragment"><a href="https://www.youtube.com/watch?v=oYJRwgHEFS0">Because it’s hard</a></li>
 <li class="fragment">Doing hard stuff is rewarding and will prepare you for success</li>
 <li class="fragment">Doing hard stuff will provide you with flexibility</li>
-<li class="fragment">Jobs requiring strong quantitative skills are consistently ranked as having the highest quality of life</li>
-<li class="fragment">Math at the top of “stable careers” according to BLS</li>
 </ul>
 </div>
 </div>
-</section>
-<section class="slide level2">
-<h2>Major’s In Our Department</h2>
-<ul>
-<li>Mathematics</li>
-<li>Physics - Mathematics</li>
-<li>Computer Science - Mathematics</li>
-<li>Data Analytics (new 3+1 program)</li>
-</ul>
 </section>
 <section>
 <section class="title-slide slide level1 center">
@@ -283,7 +275,6 @@ Eric Friedlander
 <li class="fragment">Make assumptions: population size history, strength of selection, etc.</li>
 <li class="fragment">Input: Sequencing data</li>
 <li class="fragment">Output: Probability of data</li>
-<li class="fragment">Assumptions &amp; Data <span class="math inline">\(\stackrel{\text{model}}{\rightarrow}\)</span> Probability</li>
 </ul></li>
 </ul>
 </div>
@@ -293,12 +284,14 @@ Eric Friedlander
 <div>
 <ul>
 <li class="fragment">We build a model</li>
+<li class="fragment">Assumptions &amp; Data <span class="math inline">\(\stackrel{\text{model}}{\rightarrow}\)</span> Probability</li>
 <li class="fragment">What’s a model?</li>
 </ul>
 </div>
 </section>
 <section class="slide level2">
 <h2>Text “modelyote” followed by your answer to 22333.</h2>
+<p>E.g. <em>modelyote someone that wears clothes in a magazine</em></p>
 <div class="container">
 <iframe src="https://embed.polleverywhere.com/free_text_polls/m8v8aZDjNsGL0dtEE2CLZ?controls=none&amp;short_poll=true" width="800px" height="600px">
 </iframe>
@@ -324,7 +317,7 @@ Eric Friedlander
 <div class="columns">
 <div class="column">
 <ul>
-<li>From Wikipedia: British statistician, who worked in the areas of quality control, time-series analysis, design of experiments, and Bayesian inference. He has been called “one of the great statistical minds of the 20th century”.</li>
+<li>From Wikipedia: Blah, blah blah, “one of the great statistical minds of the 20th century”, blah blah blah.</li>
 <li>“all models are wrong, but some are useful”</li>
 </ul>
 </div><div class="column">
@@ -336,7 +329,7 @@ Eric Friedlander
 </div></div>
 </section>
 <section class="slide level2">
-<h2>Let’s build a <em>model</em>!</h2>
+<h2>Let’s build a model!</h2>
 
 <img data-src="images/builder_mario_and_builder_luigi.png" class="r-stretch quarto-figure quarto-figure-&quot;center"></section>
 <section class="slide level2 smaller">
@@ -357,13 +350,13 @@ Eric Friedlander
 <h2>Let’s build a <em>model</em>!</h2>
 <ul>
 <li>I need some volunteers!</li>
-<li>Raise your hand if you’re willing to come on stage!</li>
+<li>Raise your hand if you’re willing to come on up!</li>
 </ul>
 </section>
 <section class="slide level2">
 <h2>Shiny App</h2>
 <ul>
-<li><a href="https://efriedlander.shinyapps.io/usf-popgen/">Pop-Gen App</a></li>
+<li><a href="https://efriedlander.shinyapps.io/usf2026-shiny/">Pop-Gen App</a></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -585,7 +578,7 @@ Eric Friedlander
 <section class="slide level2">
 <h2>Back to the Shiny App</h2>
 <ul>
-<li><a href="https://efriedlander.shinyapps.io/usf-popgen/">Pop-Gen App</a></li>
+<li><a href="https://efriedlander.shinyapps.io/usf2026-shiny/">Pop-Gen App</a></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -640,6 +633,7 @@ Eric Friedlander
 <img data-src="junior-day-2026_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
 <section class="slide level2">
 <h2>Back to the app!</h2>
+<p><a href="https://efriedlander.shinyapps.io/usf2026-shiny/">Pop-Gen App</a></p>
 </section></section>
 <section>
 <section class="title-slide slide level1 center">
@@ -695,7 +689,7 @@ Eric Friedlander
 <li>I’ve hidden a lot of the underlying math from you and there are lot of additional considerations to build models</li>
 </ul>
 </section>
-<section class="slide level2">
+<section class="slide level2 smaller">
 <h2>Wrap-Up</h2>
 <ul>
 <li>Math and Statistics is applicable to almost everything</li>
@@ -711,9 +705,32 @@ Eric Friedlander
 <li>Computer Science</li>
 </ul></li>
 </ul>
+</section>
+<section class="slide level2">
+<h2>Programs In Our Department</h2>
+</section>
+<div class="columns">
+<div class="column">
+<section class="slide level2">
+<h2>Majors</h2>
+<ul>
+<li>Mathematics</li>
+<li>Physics - Mathematics</li>
+<li>Computer Science - Mathematics</li>
+<li>Data Analytics (new 3+1 program)</li>
+</ul>
+</section>
+</div><div class="column">
+<section class="slide level2">
+<h2>Minors:</h2>
+<ul>
+<li>Data Science</li>
+</ul>
+</section>
+</div>
+</div>
 
-
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/coilogo.png" class="slide-logo"></p>
@@ -729,6 +746,7 @@ Eric Friedlander
   <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -750,7 +768,8 @@ Eric Friedlander
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -771,7 +790,7 @@ Eric Friedlander
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -921,7 +940,7 @@ Eric Friedlander
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
