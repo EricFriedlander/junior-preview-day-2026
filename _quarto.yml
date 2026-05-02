@@ -7,8 +7,8 @@ format:
   revealjs:
     theme: [college-of-idaho.scss, logo.scss]
     logo: images/coilogo.png
-    slide-number: true
     progress: true
+    scrollable: true
     hash: true
     hash-type: number
     width: 1280
@@ -18,9 +18,11 @@ format:
     navigation-mode: linear
     controls: true
     footer: "Junior Preview Day | College of Idaho | May 2, 2026"
-    chalkboard: false
+    chalkboard: true
     history: false
 
 execute:
   echo: false
-  eval: false
+  eval: true
+  cache: true
+  cache.lazy: false

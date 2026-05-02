@@ -9,34 +9,28 @@ library(mosaic)
 library(reshape)
 ```
 
-## A Little Bit About Met
+## A Little Bit About Me {.smaller}
 
 - I'm in the **MAPS** (Mathematics & Physical Sciences) department
 - I mostly teach Statistics, Computer Science, and Data Analytics Courses
 - My undergraduate degree is in Mathematics & Statistics
+- After college, I was a Business Analyst at Capital One 
 - My graduate degree is in Statistics & Operations Research
-- I'm grew up just outside New York City
+- Did a Post-Doc in Population Genetics
+- I grew up just outside New York City
 
 ## Why should you study Math and Statistics?
 
-- The demand for quantitative skills is outpacing nearly every other field.
-- Extremely high earning potential
+- [The demand for quantitative skills is outpacing nearly every other field]{.fragment .strike}
+- [Extremely high earning potential]{.fragment .strike}
 
 . . .
 
 :::{.incremental}
 - [Because it's hard](https://www.youtube.com/watch?v=oYJRwgHEFS0)
 - Doing hard stuff is rewarding and will prepare you for success
-- You will have more flexibility 
-- Jobs requiring strong quantitative skills are consistently ranked as having the highest quality of life
+- Doing hard stuff will provide you with flexibility 
 :::
-
-## Major's In Our Department
-
-- Mathematics
-- Physics - Mathematics
-- Computer Science - Mathematics
-- Data Analytics (new 3+1 program)
 
 # Population Genetics
 
@@ -72,16 +66,31 @@ library(reshape)
   - Make assumptions: population size history, strength of selection, etc.
   - Input: Sequencing data
   - Output: Probability of data
-  - Assumptions \& Data $\stackrel{\text{model}}{\rightarrow}$ Probability
 :::
 
 ## How do we do this?
 
 :::{.incremental}
 - We build a model
-- What's a model?
-- Model: a simplified but tractable representation of the real world
+- Assumptions \& Data $\stackrel{\text{model}}{\rightarrow}$ Probability
+- What's a model? 
 :::
+
+## Text "modelyote " followed by your answer to 22333. 
+
+E.g. *modelyote someone that wears clothes in a magazine*
+
+<div class="container">
+<iframe src="https://embed.polleverywhere.com/free_text_polls/m8v8aZDjNsGL0dtEE2CLZ?controls=none&short_poll=true" width="800px" height="600px"></iframe>
+</div>
+
+
+## What is a model?
+
+- A model is a simplified but tractable version of reality
+- What does tractable mean?
+
+
 
 ## Calculating the area of California
 
@@ -96,7 +105,7 @@ library(reshape)
 
 ::::{.columns}
 :::{.column}
-- From Wikipedia: British statistician, who worked in the areas of quality control, time-series analysis, design of experiments, and Bayesian inference. He has been called "one of the great statistical minds of the 20th century".
+- From Wikipedia: Blah, blah blah, "one of the great statistical minds of the 20th century", blah blah blah.
 - "all models are wrong, but some are useful"
 :::
 :::{.column}
@@ -104,9 +113,9 @@ library(reshape)
 :::
 ::::
 
-## Let's build a *model*!
+## Let's build a model!
 
-![](images/builder_mario_and_builder_luigi.png){.r-stretch}
+![](images/builder_mario_and_builder_luigi.png){.r-stretch fig-align="center}
 
 ## Simplifying Reality {.smaller}
 
@@ -121,9 +130,15 @@ library(reshape)
 :::
 
 
-## Wright-Fisher Model
+## Let's build a *model*!
 
-![](images/WF-Images/WFImageLast.jpg)
+- I need some volunteers!
+- Raise your hand if you're willing to come on up!
+
+
+## Shiny App
+
+- [Pop-Gen App](https://efriedlander.shinyapps.io/usf2026-shiny/)
 
 ## Wright-Fisher Model
 
@@ -137,12 +152,12 @@ ggplot(data = data, aes(x =x, y= y)) +
   ylab("Luigi Proportion")
 ```
 
-## We know this distribution!
+## Statisticians know this distribution!
 
 :::{.incremental}
--   If we know $p_k$... what is the distribution of $X_k$?
--   Binomial!!!
--   Specifically Binomial($N$, $p_k$)
+-   If $p_k$ is the proportion of Luigi's in the $k$th generation and...
+-   $X_{k+1}$ is the number of Luigi's in the $k+1$th generation then...
+-   $X_k$ has a *Binomial distribution*
 :::
 
 ## We can simulate this!
@@ -215,7 +230,6 @@ reps <- 1000
 pop_size <- 1000
 init <- .5
 gens <- 1000
-final_prob <- 0
 p <- matrix(nrow=reps, ncol=gens)
 p[ ,1] = init
 steps <- pop_size
@@ -236,7 +250,9 @@ theme(legend.position="none")
 
 ```{r}
 p_melted <- melt(p)
-ggplot(aes(x = X2, y = value, color=as.factor(X1)), data=p_melted) +
+p_melted |>
+  filter(X1 < 101) |> 
+ggplot(aes(x = X2, y = value, color=as.factor(X1))) +
 geom_line(alpha=0.7, lwd=.3) +
 xlab("Generations") +
 ylab("Luigi Proportion")+
@@ -418,25 +434,29 @@ geom_histogram(aes(y = after_stat(density))) +
 - What's going to happen eventually?
   - All <span style="color:red;">Marios</span> or all <span style="color:green;">Luigis</span>
 - Mutation: Occasionally <span style="color:red;">Mario</span> mutates into <span style="color:green;">Luigi</span> (and vice versa)
-  - Adding Mutation to Model: Suppose with some small probability a Mario mutates to a Luigi and a Luigi Mutates to a Mario
+  - Let's add mutation to our model
 :::
 
-## We know this distribution
+## How can we add mutation to our model?
 
-:::{.incremental}
-- What is the distribution of the number of mutant Marios/Luigis if we know the number of Marios/Luigis and the probability of mutation...
-- BINOMIAL AGAIN!!
-- Now: Allele frequency wants to go into boundary, but mutation pushing it back in a little bit... eventually these forces of evolution balance
-:::
+- Any ideas?
 
-## Stationary Distribution
+## Back to the Shiny App
+
+- [Pop-Gen App](https://efriedlander.shinyapps.io/usf2026-shiny/)
+
+## How can we make this useful?
+
+- Let's consider a simple question: "What is the mutation rate in humans?"
+
+## Lots of Simulations: 100 Generations
 
 ```{r}
 set.seed(1988)
-reps <- 1000
+reps <- 10000
 pop_size <- 1000
 init <- .5
-gens <- 1000
+gens <- 10000
 mut <- 10^(-4)
 final_prob <- 0
 p <- matrix(nrow=reps, ncol=gens)
@@ -449,6 +469,58 @@ for(i in 2:gens){
 
 p_melted <- melt(p)
 p_melted |>
+filter(X2 == 100) %>%
+ggplot(aes(x = value), data = .) +
+geom_histogram(aes(y = after_stat(density))) +
+  # geom_density() +
+  ylim(0,y_max) +
+  ylab("") +
+  xlab("Luigi Proportion 100 Generations")
+```
+
+## Lots of Simulations: 200 Generations
+
+```{r}
+p_melted |>
+filter(X2 == 200) %>%
+ggplot(aes(x = value), data = .) +
+geom_histogram(aes(y = after_stat(density))) +
+  # geom_density() +
+  ylim(0,y_max) +
+  ylab("") +
+  xlab("Luigi Proportion 200 Generations")
+```
+
+## Lots of Simulations: 300 Generations
+
+```{r}
+p_melted |>
+filter(X2 == 300) %>%
+ggplot(aes(x = value), data = .) +
+geom_histogram(aes(y = after_stat(density))) +
+  # geom_density() +
+  ylim(0,y_max) +
+  ylab("") +
+  xlab("Luigi Proportion 300 Generations")
+```
+
+## Lots of Simulations: 500 Generations
+
+```{r}
+p_melted |>
+filter(X2 == 500) %>%
+ggplot(aes(x = value), data = .) +
+geom_histogram(aes(y = after_stat(density))) +
+  # geom_density() +
+  ylim(0,y_max) +
+  ylab("") +
+  xlab("Luigi Proportion 500 Generations")
+```
+
+## Lots of Simulations: 1000 Generations
+
+```{r}
+p_melted |>
 filter(X2 == 1000) %>%
 ggplot(aes(x = value), data = .) +
 geom_histogram(aes(y = after_stat(density))) +
@@ -458,77 +530,201 @@ geom_histogram(aes(y = after_stat(density))) +
   xlab("Luigi Proportion 1000 Generations")
 ```
 
-## How do we use this for inference?
+## Lots of Simulations: 2000 Generations
 
-- Shape of stationary distribution depends on populations size
-- Look at distribution of allele frequencies... pick population size which produces stationary distribution
+```{r}
+p_melted |>
+filter(X2 == 2000) %>%
+ggplot(aes(x = value), data = .) +
+geom_histogram(aes(y = after_stat(density))) +
+  # geom_density() +
+  ylim(0,y_max) +
+  ylab("") +
+  xlab("Luigi Proportion 2000 Generations")
+```
 
-# Genetic Hitchiking
+## Lots of Simulations: 3000 Generations
+
+```{r}
+p_melted |>
+filter(X2 == 3000) %>%
+ggplot(aes(x = value), data = .) +
+geom_histogram(aes(y = after_stat(density))) +
+  # geom_density() +
+  ylim(0,y_max) +
+  ylab("") +
+  xlab("Luigi Proportion 3000 Generations")
+```
+
+## Lots of Simulations: 4000 Generations
+
+```{r}
+p_melted |>
+filter(X2 == 4000) %>%
+ggplot(aes(x = value), data = .) +
+geom_histogram(aes(y = after_stat(density))) +
+  # geom_density() +
+  ylim(0,y_max) +
+  ylab("") +
+  xlab("Luigi Proportion 4000 Generations")
+```
+
+## Lots of Simulations: 5000 Generations
+
+```{r}
+p_melted |>
+filter(X2 == 5000) %>%
+ggplot(aes(x = value), data = .) +
+geom_histogram(aes(y = after_stat(density))) +
+  # geom_density() +
+  ylim(0,y_max) +
+  ylab("") +
+  xlab("Luigi Proportion 5000 Generations")
+```
+
+## Stationary Distribution
+
+```{r}
+p_melted <- melt(p)
+p_melted |>
+filter(X2 == 5000) %>%
+ggplot(aes(x = value), data = .) +
+geom_histogram(aes(y = after_stat(density))) +
+  # geom_density() +
+  ylim(0,y_max) +
+  ylab("") +
+  xlab("Luigi Proportion 1000 Generations")
+```
+
+## How do we use this to answer our question?
+
+```{r}
+set.seed(1988)
+mut <- 10^(-3)
+p <- matrix(nrow=reps, ncol=gens)
+p[ ,1] = init
+steps <- pop_size
+for(i in 2:gens){
+  psi <- p[,i-1]*(1-mut)+(1-p[,i-1])*mut
+  p[, i] <- rbinom(reps, size=pop_size, prob=psi)/pop_size
+}
+
+p_melted_large <- melt(p) |> 
+  filter(X2 == 10000) |> 
+  mutate(Rate = "Big")
+
+mut <- 10^(-5)
+p <- matrix(nrow=reps, ncol=gens)
+p[ ,1] = init
+steps <- pop_size
+for(i in 2:gens){
+  psi <- p[,i-1]*(1-mut)+(1-p[,i-1])*mut
+  p[, i] <- rbinom(reps, size=pop_size, prob=psi)/pop_size
+}
+p_melted_small <- melt(p) |> 
+  filter(X2 == 10000) |> 
+  mutate(Rate = "Small")
+
+p_melted |>
+  mutate(Rate = "Medium") |> 
+  bind_rows(p_melted_large) |>
+  bind_rows(p_melted_small) |>
+  filter(X2 == 10000) |> 
+  ggplot(aes(x = value)) +
+  geom_histogram(aes(y = after_stat(density), color=Rate), fill="white", alpha=0, position="identity") +
+    # geom_density(aes(color=Rate), alpha=0) +
+    # ylim(0,y_max) +
+    ylab("") +
+    xlab("Luigi Proportion Steady State")
+```
+
+## Back to the app!
+
+[Pop-Gen App](https://efriedlander.shinyapps.io/usf2026-shiny/)
+
+# MORE COMPLEXITY!
+
+## Three More Evoluationary "Forces"
+
+- Recombination
+- Natural Selection
+  - Recombination + Natural Selection = Genetic Hitchhiking
+- Migration
 
 ## Genetic Hitchhiking
 
-![](images/WF-Images/Hitch1.jpg)
+![](images/WF-Images/Hitch1.jpg){.r-stretch fig-align="center}
 
 
 ## Cross-Over Recombination
 
-![](images/crossover-recombination.png)
+![](images/crossover-recombination.png){.r-stretch fig-align="center}
 
 
 ## Genetic Hitchhiking
 
-![](images/WF-Images/Hitch2.jpg)
+![](images/WF-Images/Hitch2.jpg){.r-stretch fig-align="center}
 
 
 ## Genetic Hitchhiking
 
-![](images/WF-Images/Hitch3.jpg)
+![](images/WF-Images/Hitch3.jpg){.r-stretch fig-align="center}
 
-
-## Linkage has confounding effect on genetic analyses
-
-![](images/WF-Images/Hitch4.jpg)
-
-
-## Selection leaves its signature on the genome
-
-![](images/hitchhiking.jpg)
-
-# Industrial Engineering
-
-
-## Load Balancing
-
-![](images/LoadBalancing/Slide1.jpeg)
-
-## Random Routing
-  ![](images/LoadBalancing/Slide2.jpeg)
-
-## Power of Two
-
-![](images/LoadBalancing/Slide3.jpeg)
-
-## Power of Two
-
-![](images/LoadBalancing/Slide4.jpeg)
-
-## We know that distribution!!
+## Discussion
 
 :::{.incremental}
--   What do you think we should use to model the interarrival times of jobs?
-  -   Exponential with rate $n\lambda$
--   What do you think we should use to model the processing times?
-  -   Exponential with rate $1$
--   My PhD... what happens when we sent $n\to\infty$?
+- Why can't we capture Genetic Hitchhiking with our model? (Two main reasons)
+  + Only one location
+  + No selection
+- Any ideas for how we could incorporate selection in our model?
+- What about recombination?
 :::
 
-## Steady State Distributions
+## Recap
 
-![](images/LoadBalancing/decay.png)
+- Models are simplified but tractable version of reality
+- Modeling can be fun (especially when you practice it)
+- I've hidden a lot of the underlying math from you and there are lot of additional considerations to build models
 
-## Join-the-Shortest-Queue
+## Wrap-Up {.smaller}
 
-![](images/LoadBalancing/Slide5.jpeg)
+- Math and Statistics is applicable to almost everything
+- In the past year I've worked on projects (most with students) in the following fields:
+  + Genetics (Both Population and Statistical)
+  + Physics
+  + Metabolomics (Chemistry)
+  + Ecology
+  + Education/Psychology
+  + Paleo-anthropology
+  + Business
+  + Computer Science
+
+
+## Programs In Our Department
+
+
+:::: {.columns}
+
+::: {.column}
+## Majors
+
+- Mathematics
+- Physics - Mathematics
+- Computer Science - Mathematics
+- Data Analytics (new 3+1 program)
+
+
+
+:::
+
+::: {.column}
+
+## Minors:
+
+- Data Science
+:::
+
+::::
 
 
 
